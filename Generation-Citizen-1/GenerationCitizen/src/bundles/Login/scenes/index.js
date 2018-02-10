@@ -1,1 +1,0 @@
-export LoginScene from './LoginScene'

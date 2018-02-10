@@ -1,9 +1,0 @@
-build/
-DerivedData/
-
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-*node_modules 

@@ -1,1 +1,0 @@
-export GoalScene from './GoalScene'
