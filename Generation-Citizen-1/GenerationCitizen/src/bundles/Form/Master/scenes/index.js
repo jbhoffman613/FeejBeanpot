@@ -1,0 +1,1 @@
+export MasterScene from './MasterScene'

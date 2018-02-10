@@ -1,0 +1,1 @@
+export CollegeChapterScene from './CollegeChapterScene'
