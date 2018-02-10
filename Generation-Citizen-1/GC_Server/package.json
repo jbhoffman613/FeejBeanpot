@@ -1,0 +1,23 @@
+{
+  "name": "gc_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "routes.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "google-auth-library": "^0.10.0",
+    "google-spreadsheet": "^2.0.3",
+    "googleapis": "^19.0.0",
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {
+    "mongoose": "^4.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
