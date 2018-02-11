@@ -11,13 +11,6 @@ import Mapbox from '@mapbox/react-native-mapbox-gl';
 
 Mapbox.setAccessToken('pk.eyJ1IjoiaG9mZm1hbmoiLCJhIjoiY2pkaTJwd3lyMTVteTJ4bjliazVyc3NpNCJ9._5aXfau_lZXv7soos0OryA');
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

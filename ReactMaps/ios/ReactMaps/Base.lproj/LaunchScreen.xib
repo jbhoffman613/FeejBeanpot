@@ -36,8 +36,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-xm-LWE">
-                    <rect key="frame" x="101" y="242" width="278" height="318"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clear.png" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-xm-LWE">
+                    <rect key="frame" x="-6" y="163" width="492" height="499"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
             </subviews>
@@ -56,6 +56,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Icon.jpeg" width="926" height="784"/>
+        <image name="clear.png" width="640" height="480"/>
     </resources>
 </document>
