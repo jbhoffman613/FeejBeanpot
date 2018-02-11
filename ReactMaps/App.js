@@ -9,7 +9,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
+  Alert
 } from 'react-native';
 import Mapbox from '@mapbox/react-native-mapbox-gl';
 
@@ -25,20 +27,72 @@ const instructions = Platform.select({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
   },
+  map: {
+    flex: 16,
+  },
+  button: {
+    flex: 1,
+    backgroundColor: 'gray',
+  },
+  annotationContainer: {
+    width: 30,
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: 15,
+  },
+  annotationFill: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: 'orange',
+    transform: [{ scale: 0.6 }],
+  }
 });
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  renderAnnotations () {
+      return (
+        <Mapbox.PointAnnotation
+          key='pointAnnotation'
+          id='pointAnnotation'
+          coordinate={[-71.089700, 42.340100]}>
+
+          <View style={styles.annotationContainer}>
+            <View style={styles.annotationFill} />
+          </View>
+          <Mapbox.Callout title='Northeastern University' />
+        </Mapbox.PointAnnotation>
+      )
+    }
+
   render() {
     return (
       <View style={styles.container}>
-        <Mapbox.MapView
-            styleURL={Mapbox.StyleURL.Street}
-            zoomLevel={15}
-            centerCoordinate={[11.256, 43.770]}
-            style={styles.container}>
-        </Mapbox.MapView>
+        <View style={styles.map}>
+          <Mapbox.MapView
+              styleURL={Mapbox.StyleURL.Street}
+              zoomLevel={14}
+              centerCoordinate={[-71.089700, 42.340100]}
+              style={styles.container}
+              showUserLocation={true}
+              zoomLevel={14}>
+              {this.renderAnnotations()}
+          </Mapbox.MapView>
+        </View>
+        <View style={styles.button}>
+          <Button
+            style={{alignItems: 'center'}}
+            title="Settings"
+            onPress={() => {Alert.alert("Button")}}
+            color='#FFFFFF'>
+          </Button>
+        </View>
       </View>
     );
   }
