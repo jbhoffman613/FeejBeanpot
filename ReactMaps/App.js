@@ -178,7 +178,7 @@ export default class App extends Component<Props> {
           <Button
             style={{alignItems: 'center'}}
             title="Settings"
-            onPress={() => {Alert.alert("Button")}}
+            onPress={() => {Alert.alert("Coming Soon...!")}}
             color='#FFFFFF'>
           </Button>
         </View>
